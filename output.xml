@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230408 16:12:29.411" rpa="false" schemaversion="3">
+<suite id="s1" name="Exemplo" source="/home/paru/Documentos/Code/Robot-live/exemplo.robot">
+<test id="s1-t1" name="Caso de teste 01 - Acessar o site das Americanas" line="13">
+<kw name="Abrir o navegador" library="exemplo_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230408 16:12:29.523" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230408 16:12:29.523" endtime="20230408 16:12:30.309"/>
+</kw>
+<status status="PASS" starttime="20230408 16:12:29.522" endtime="20230408 16:12:30.309"/>
+</kw>
+<kw name="Acesse a URL inicial" library="exemplo_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230408 16:12:30.310" level="INFO">Opening url 'https://www.americanas.com.br/'</msg>
+<status status="PASS" starttime="20230408 16:12:30.310" endtime="20230408 16:12:31.929"/>
+</kw>
+<status status="PASS" starttime="20230408 16:12:30.309" endtime="20230408 16:12:31.929"/>
+</kw>
+<kw name="Verificar se o título da página contém a frase &quot;Americanas - tudo, a toda hora, em qualquer lugar :)&quot;" library="exemplo_resources" sourcename="Verificar se o título da página contém a frase &quot;${FRASE}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${FRASE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230408 16:12:32.175" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230408 16:12:32.175" level="FAIL">Title should have been 'Americanas - tudo, a toda hora, em qualquer lugar :)' but was 'Verificação de acesso'.</msg>
+<status status="FAIL" starttime="20230408 16:12:31.930" endtime="20230408 16:12:32.176"/>
+</kw>
+<status status="FAIL" starttime="20230408 16:12:31.929" endtime="20230408 16:12:32.176"/>
+</kw>
+<doc>Esse caso de testes deve abrir o browser....
+Continuação da documentantion
+</doc>
+<tag>eletro</tag>
+<tag>login</tag>
+<tag>promo</tag>
+<status status="FAIL" starttime="20230408 16:12:29.522" endtime="20230408 16:12:32.176">Title should have been 'Americanas - tudo, a toda hora, em qualquer lugar :)' but was 'Verificação de acesso'.</status>
+</test>
+<test id="s1-t2" name="Caso de teste 02 - Acessar o site das Americanas" line="24">
+<kw name="Abrir o navegador" library="exemplo_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230408 16:12:32.178" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230408 16:12:32.178" endtime="20230408 16:12:33.140"/>
+</kw>
+<status status="PASS" starttime="20230408 16:12:32.177" endtime="20230408 16:12:33.140"/>
+</kw>
+<kw name="Clicar no menu celulares" library="exemplo_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//a[@class='trending-departments-item-with-menu__Link-sc-50fjcb-2 jEJUGH'][contains(.,'celulares')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230408 16:12:33.141" level="INFO">Clicking button '//a[@class='trending-departments-item-with-menu__Link-sc-50fjcb-2 jEJUGH'][contains(.,'celulares')]'.</msg>
+<msg timestamp="20230408 16:12:33.377" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230408 16:12:33.377" level="FAIL">Button with locator '//a[@class='trending-departments-item-with-menu__Link-sc-50fjcb-2 jEJUGH'][contains(.,'celulares')]' not found.</msg>
+<status status="FAIL" starttime="20230408 16:12:33.140" endtime="20230408 16:12:33.378"/>
+</kw>
+<status status="FAIL" starttime="20230408 16:12:33.140" endtime="20230408 16:12:33.378"/>
+</kw>
+<kw name="Verificar se o título da página contém a frase &quot;Celulares e Smartphones com Frete Grátis* | Americanas&quot;" library="exemplo_resources" sourcename="Verificar se o título da página contém a frase &quot;${FRASE}&quot;">
+<status status="NOT RUN" starttime="20230408 16:12:33.378" endtime="20230408 16:12:33.378"/>
+</kw>
+<status status="FAIL" starttime="20230408 16:12:32.177" endtime="20230408 16:12:33.379">Button with locator '//a[@class='trending-departments-item-with-menu__Link-sc-50fjcb-2 jEJUGH'][contains(.,'celulares')]' not found.</status>
+</test>
+<doc>Essa é uma suite de testes exemplo - Americanas</doc>
+<status status="FAIL" starttime="20230408 16:12:29.411" endtime="20230408 16:12:33.380"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">eletro</stat>
+<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">promo</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Exemplo">Exemplo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
